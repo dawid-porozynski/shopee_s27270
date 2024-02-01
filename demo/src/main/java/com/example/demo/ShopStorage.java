@@ -16,7 +16,7 @@ public class ShopStorage {
         this.productsList=new ArrayList<>();
     }
 
-    private void addProduct(Product product){
+   public void addProduct(Product product){
         this.productsList.add(product);
 
 

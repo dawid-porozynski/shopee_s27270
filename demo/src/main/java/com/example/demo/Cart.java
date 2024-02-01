@@ -4,11 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Cart {
-    private String name;
+    private Client client;
 
-    private final List<String> productList;
-    public Cart(){
-        this.productList=new ArrayList<>();
+    private final List<String> productList=new ArrayList<>();;
+
+    public Cart(Client client){
+
+        this.client=client;
+    }
+
+    public List<String> getProductList() {
+        return productList;
+    }
+
+    public Client getClient() {
+        return client;
     }
 
     public void addItemToCart(String productToAdd){

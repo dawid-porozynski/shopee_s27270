@@ -1,28 +1,23 @@
 package com.example.demo;
 
-
-
 public class Client {
 
 
-    private String customerName;
+    private int id;
     private int balance;
 
 
-    public Client(String customerName, int balance) {
-        this.customerName = customerName;
+    public Client(int id, int balance) {
+        this.id = id;
         this.balance = balance;
     }
 
-    public String getCustomerName() {
-        return customerName;
+    public int getId() {
+        return id;
     }
 
     public int getBalance() {
         return balance;
-    }
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
     }
 
     public void setBalance(int balance) {
@@ -37,7 +32,7 @@ public class Client {
     @Override
     public String toString() {
         return "Customer" +
-                "\nName: " + getCustomerName() +
+                "\nName: " + getId() +
                 "\nBalance: " + getBalance() + "$";
     }
 
