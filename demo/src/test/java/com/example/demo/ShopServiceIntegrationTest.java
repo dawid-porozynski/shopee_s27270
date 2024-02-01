@@ -26,13 +26,15 @@ class ShopIntegrationTest {
 
 	}
 	@Test
-	void shouldOrderItems(){
-		Client client =new Client(1,25);
+	void shouldNotOrderItems(){
+		Client client =new Client(1,1);
 		Cart cart = new Cart(client);
 		cart.addItemToCart("mleko");
 		cart.addItemToCart("mleko");
 		cart.addItemToCart("piwo");
-		shopService.orderItems(cart);
+		shopService.addProduct(10,"mleko");
+		shopService.addProduct(12,"piwo");
+		assertThat(shopService.orderItems(cart).getStatusType()).isEqualTo(StatusType.FAILED);
 
 	}
 
